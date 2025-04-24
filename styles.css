@@ -59,11 +59,6 @@
   color: #0057a9;
   text-decoration: underline;
 }
-
-.text-block {
-    max-width: 55%;
-    word-break: break-word;
-  }
   
 
 .intro {
@@ -182,6 +177,11 @@ body::before {
 
   .skills, .skills2, .skills3, .program1, .edu, .prof {
     width: 90%;
+  }
+
+  .text-block {
+    max-width: 55%;
+    word-break: break-word;
   }
 
   .right-side-content {
