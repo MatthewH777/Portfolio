@@ -1,8 +1,8 @@
 
-  /* Used ai to help me with spliting the screen diagonally */
-  /* Used ai to help me with the shapes */
-   /* Asked ai for @media for desktop and mobile devices */
-  /* thought about adding tooltips to my hexagons on the skills page but couldnt entirely get it so i used ai to help me */
+  /* Used ai to help me with spliting the screen diagonally
+   Used ai to help me with the shapes 
+    Asked ai for @media for desktop and mobile devices 
+   thought about adding tooltips to my hexagons on the skills page but couldnt entirely get it so i used ai to help me */
 
 /* NAVIGATION */
 .header {
@@ -107,7 +107,7 @@
   text-decoration: none;
 }
 
-.button { margin-left: 29px; }
+.button { margin-right:50rem; margin-left: 2rem; } 
 .button2 { margin-left: 25px; margin-top: 75px; }
 
 .button:hover,
@@ -173,15 +173,21 @@ body::before {
   .flex-layout {
     flex-direction: column;
     align-items: center;
+    max-width: fit-content;
+    word-break: break-word;
   }
 
   .skills, .skills2, .skills3, .program1, .edu, .prof {
     width: 90%;
   }
 
-  .text-block {
+  .intro, .text-block {
     max-width: 55%;
     word-break: break-word;
+  }
+
+  .hex-container {
+    max-width: fit-content;
   }
 
   .right-side-content {
@@ -204,7 +210,7 @@ body::before {
 }
 
 /* POSITIONED ELEMENTS */
-.skills, .skills2, .skills3, .program1, .edu, .prof {
+.skills3, .prof {
   position: absolute;
   box-sizing: border-box;
   margin: 10px;
@@ -225,7 +231,7 @@ body::before {
 }
 
 .edu { top: 50%; right: 10%; width: 30%; order: 5; }
-.prof, .prof-class { top: 6%; right: 1%; width: 30%; order: 6; }
+.prof, .prof-class { top: 3.8%; right: 1%; width: 30%; order: 6; }
 
 /* PROGRAM CONTAINER */
 .program-container {
@@ -240,6 +246,7 @@ body::before {
 .program-text {
   flex: 1;
   max-width: 500px;
+  margin-left: 20rem;
 }
 
 .program-container img {
@@ -247,6 +254,7 @@ body::before {
   height: auto;
   border: 2px solid #0057a9;
   border-radius: 8px;
+  margin-right: 20rem;
 }
 
 /* HEX SHAPES */
