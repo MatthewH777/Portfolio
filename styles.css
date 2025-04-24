@@ -1,356 +1,339 @@
-/* i had to lookup how to make the nav box appear over the split background and i found that i use z-index and set it higher then the body's z-index */
 
+  /* Used ai to help me with spliting the screen diagonally */
+  /* Used ai to help me with the shapes */
+   /* Asked ai for @media for desktop and mobile devices */
+  /* thought about adding tooltips to my hexagons on the skills page but couldnt entirely get it so i used ai to help me */
+
+/* NAVIGATION */
 .header {
-    background: transparent;
-    padding: 20px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+  background: transparent;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
 .navbox {
-    display: flex;
-    color: transparent;
-    z-index: 1;
+  display: flex;
+  color: transparent;
 }
 
 .nav {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    font-size: 18px;
-    padding: 11px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1.2rem;
+  padding: 11px;
 }
 
-.nav:hover, .nav.active {
-    color: #000000;
-    transform: scale(1.15);
+.nav:hover,
+.nav.active {
+  color: #000;
+  transform: scale(1.15);
 }
 
-.contact {
-    z-index: 1;
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.contactheader {
-    margin-left: 5px;
-}
-
+/* TEXT ELEMENTS */
 .name {
-    color:#0057a9;
-    padding: 6px;
-    z-index: 1;
+  color: #0057a9;
+  padding: 6px;
 }
 
 .major {
-    color:#222222
+  color: #222;
 }
 
-.home {
-    color:#0057a9; 
-    display: inline-block;
-    border: 2px solid #0057a9;
-    border-radius: 2px;
-    margin: 0;
-    padding: 10px 10px;
-    z-index: 1;
+.contactheader,
+.homepage,
+.marginleft {
+  margin-left: 30px;
 }
 
 .contactme {
-    color:#0057a9; 
-    text-decoration: underline;
-}
-.homepage {
-    margin-left: 30px;
+  color: #0057a9;
+  text-decoration: underline;
 }
 
 .intro {
-    font-size: 22px;
-    line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
-.marginleft {
-    margin-left: 30px;
+/* HOME LINK BOX */
+.home {
+  color: #0057a9;
+  display: inline-block;
+  border: 2px solid #0057a9;
+  border-radius: 2px;
+  margin: 0;
+  padding: 10px;
 }
 
+/* ICONS */
 .iconcontainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-  
+
 .iconcontainer h1 {
-    margin-right: 50px;
+  margin-right: 50px;
 }
-  
+
 .controller {
-    margin-left: 10px;
-    margin-top: 2px;
-    width: 20px;
-    height: 22px;
+  margin-left: 10px;
+  margin-top: 2px;
+  width: 20px;
+  height: 22px;
 }
 
-.button {
-    display: inline-block;
-    color: white;
-    font-size: 16px;
-    background-color: #0057a9;
-    padding: 18px 35px;
-    border: 2px solid #013e77;
-    border-radius: 6px;
-    margin: 18px 0;
-    margin-left: 29px;
-    text-align: center;
-}
-  
-
-.button:hover {
-transform: scale(1.05);
-background-color: rgb(0, 0, 0);
-border-color: #0061bb;
-border-width: 3px;
+/* BUTTONS */
+.button, .button2 {
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #0057a9;
+  padding: 18px 35px;
+  border: 2px solid #013e77;
+  border-radius: 6px;
+  margin: 18px 0;
+  text-align: center;
+  text-decoration: none;
 }
 
+.button { margin-left: 29px; }
+.button2 { margin-left: 25px; margin-top: 75px; }
 
-.button2 {
-    display: inline-block;
-    color: white;
-    font-size: 16px;
-    background-color: #0057a9;
-    padding: 18px 35px;
-    border: 2px solid #013e77;
-    border-radius: 6px;
-    margin: 18px 0;
-    margin-left: 25px;
-    margin-top: 75px;
-    text-align: center;
-    text-decoration: none;
-}
-
-
+.button:hover,
 .button2:hover {
-    transform: scale(1.05);
-    background-color: rgb(0, 0, 0);
-    border-color: #0061bb;
-     border-width: 3px;
+  transform: scale(1.05);
+  background-color: #000;
+  border-color: #0061bb;
+  border-width: 3px;
 }
 
-body {
-    height: 100vh;
-    background: white;
-    position: relative;
-    
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    
-}
-  /* Used ai to help me with spliting the screen diagonally */
-body::before {
-    content: '';
-    position: absolute;
-    top: -8;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0057a9; 
-    clip-path: polygon(35% 0, 100% 0, 100% 100%, 65% 100%);
-    z-index: -1;
-}
-
-.skills {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    box-sizing: 20px;
-}
-
-.skills2 {
-    position: absolute;
-    right: 10%;
-    top: 67%;
-    box-sizing: 20px;
-}
-
-.skills3 {
-    position: absolute;
-    left: 65%;
-    top: 47%;
-    box-sizing: 20px;
-    color: #ffffff;
-}
-
+/* SPECIAL BUTTON */
 .button3 {
-    display: inline-block;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 18px 35px;
-
-    border-radius: 6px;
-    margin: 18px 0;
-    margin-left: 5px;
-    margin-top: -100px;
-    text-align: center;
-    text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 18px 35px;
+  border-radius: 6px;
+  margin: 18px 0 0 5px;
+  margin-top: -100px;
+  text-align: center;
+  text-decoration: none;
 }
-
 
 .button3:hover {
-    transform: scale(1.20);
-    
+  transform: scale(1.2);
 }
 
-.edu {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    box-sizing: 20px;
+/* BACKGROUND SPLIT */
+body {
+  height: 100vh;
+  background: white;
+  position: relative;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-.prof {
-    position: absolute;
-    right: 1%;
-    top: 6%;
-    box-sizing: 10px;
+body::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0057a9;
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 65% 100%);
+  z-index: -1;
 }
 
-.hex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* FLEX LAYOUT */
+.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    padding: 20px;
-  }
-
-  .hex-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    padding: 20px;
-  }
-
-
-  /* Used ai to help me with the shapes */
-.hex {
-    width: 100px;
-    aspect-ratio: 1;
-    background: #013e77;
-    clip-path: polygon(
-      25% 5%, 75% 5%,
-      100% 50%, 75% 95%,
-      25% 95%, 0% 50%
-    );
-    display: flex;
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+  .flex-layout {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-  
-.hex img {
-    max-width: 60%;
-    height: auto;
-    z-index: 2;
-}
-  
-.hex:hover {
-    transform: scale(1.15);
-}
-
-
-.active {
-    text-decoration: underline;
-    text-underline-offset: 4px;
   }
 
+  .skills, .skills2, .skills3, .program1, .edu, .prof {
+    width: 90%;
+  }
 
-  /* Asked ai for @media for desktop and mobile devices */
-
-  /* Base styling */
-.right-side-content {
+  .right-side-content {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
     color: white;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.5;
-    font-size: 18px;
   }
-  
-  /* Desktop layout */
-  @media (min-width: 769px) {
-    .right-side-content {
-      position: absolute;
-      top: 16%;
-      right: 5%;
-      width: 35%;
-    }
+
+  .program-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Mobile layout */
-  @media (max-width: 768px) {
-    .right-side-content {
-      position: static;
-      width: 100%;
-      margin-top: 20px;
-      color: white;
-    }
-  }
-  
 
-
-
-  /* thought about adding tooltips to my hexagons on the skills page but couldnt entirely get it so i used ai to help me */
-
-  .tooltip-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip-text {
-    visibility: hidden;
-    background-color: #0057a9; /* Purple tooltip */
-    color: #fff;
+  .program-text,
+  .program-container img {
+    max-width: 100%;
     text-align: center;
-    padding: 6px 12px;
-    border-radius: 8px;
+  }
+}
+
+/* POSITIONED ELEMENTS */
+.skills, .skills2, .skills3, .program1, .edu, .prof {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 10px;
+  flex: 0 0 auto;
+}
+
+.skills { top: 50%; right: 10%; width: 30%; order: 1; }
+.skills2 { top: 67%; right: 10%; width: 30%; order: 2; }
+.skills3 { top: 47%; left: 65%; width: 30%; color: #fff; order: 3; }
+
+.program1 {
+  top: 30%;
+  left: 5%;
+  width: 60%;
+  border: 3px solid #0057a9;
+  border-radius: 2%;
+  order: 4;
+}
+
+.edu { top: 50%; right: 10%; width: 30%; order: 5; }
+.prof, .prof-class { top: 6%; right: 1%; width: 30%; order: 6; }
+
+/* PROGRAM CONTAINER */
+.program-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px 5%;
+  flex-wrap: wrap;
+}
+
+.program-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.program-container img {
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #0057a9;
+  border-radius: 8px;
+}
+
+/* HEX SHAPES */
+.hex-container, .hex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.hex {
+  width: 100px;
+  aspect-ratio: 1;
+  background: #013e77;
+  clip-path: polygon(
+    25% 5%, 75% 5%,
+    100% 50%, 75% 95%,
+    25% 95%, 0% 50%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hex img {
+  max-width: 60%;
+  height: auto;
+  z-index: 2;
+}
+
+.hex:hover {
+  transform: scale(1.15);
+}
+
+/* TOOLTIP STYLES */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #0057a9;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #0057a9 transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* RIGHT-SIDE CONTENT */
+.right-side-content {
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 769px) {
+  .right-side-content {
     position: absolute;
-    top: 105%; /* Tooltip below image */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
-    font-size: 16px;
-    z-index: 10;
+    top: 16%;
+    right: 5%;
+    width: 35%;
   }
-  
-  .tooltip-text::after {
-    content: '';
-    position: absolute;
-    bottom: 100%; /* Triangle at the top of the tooltip */
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent #0057a9 transparent;
-  }
-  
-  .tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  
-  
-  .program1 {
-    border: #0057a9;
-    border-radius: 2%;
-    border-width: 3px;
-    border-style: solid;
-    position: absolute;
-    left: 5%;
-    top: 30%;
-  }
+}
